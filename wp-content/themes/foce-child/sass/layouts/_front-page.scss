@@ -138,19 +138,6 @@
   }
 }
 
-
-.nomination{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 30vh;
-}
-
-.site-footer{
-  flex-direction: column;
-}
-
 @media all and(max-width: #{$breakpoint__laptop}) {
   .story {
     &__article {
