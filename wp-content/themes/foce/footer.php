@@ -12,7 +12,6 @@
 ?>
     
 	<footer id="colophon" class="site-footer">
-    <?php get_template_part('template-parts/nomination-oscars'); ?>
         <ul>
             <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">STUDIO KOUKAKI</a></li>
