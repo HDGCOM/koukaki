@@ -10,7 +10,7 @@
  */
 
 ?>
-    
+
 	<footer id="colophon" class="site-footer">
         <ul>
             <li><a href="#">Mentions Légales</a></li>
