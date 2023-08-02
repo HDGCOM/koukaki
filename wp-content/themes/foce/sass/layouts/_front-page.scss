@@ -138,6 +138,13 @@
   }
 }
 
+#nomination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
 @media all and(max-width: #{$breakpoint__laptop}) {
   .story {
     &__article {
