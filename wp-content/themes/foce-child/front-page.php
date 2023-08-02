@@ -66,7 +66,7 @@ get_header();
             </div>
         </section>
 
-        <section class="nomination">
+        <section id="nomination">
             <?php get_template_part('template-parts/nomination-oscars');?>
         </section>
 
