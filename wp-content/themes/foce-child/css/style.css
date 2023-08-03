@@ -707,7 +707,7 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 .banner {
-  background-image: url("./assets/images/banner.png");
+  background-image: url("../../force/assets/images/banner.png");
   min-height: 806px;
   background-size: cover;
   display: flex;
