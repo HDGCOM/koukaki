@@ -829,15 +829,15 @@ textarea {
   justify-content: space-between;
   width: 66.66%;
   margin: auto;
-  /*p{
-  width: 44.5%
-  }*/
 }
 #studio > div::before {
   content: url("./assets/images/trple-leaf.png");
   position: absolute;
   left: calc(50% - 17.225px);
   top: 40%;
+}
+#studio > div p {
+  width: 44.5%;
 }
 
 #nomination {
