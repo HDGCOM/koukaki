@@ -1,5 +1,5 @@
 .banner {
-  background-image: url("../../force/assets/images/banner.png");
+  background-image: url("../assets/images/banner.png");
   min-height: 806px;
   background-size: cover;
   display: flex;
@@ -18,17 +18,18 @@
   align-items: center;
   h2{
     &::before {
-      content: url('./assets/images/sunflower_leaves.png');
+      content: url('../assets/images/sunflower_leaves.png');
       position: absolute;
       left: 0;
       top: 1.8em;
       z-index: -1;
     }
     &::after {
-      content: url('./assets/images/Sunflower.png');
+      content: url('../assets/images/Sunflower.png');
       position: absolute;
       left: 0.7em;
       top: 6em;
+      animation: rotateFlowers 10000ms linear infinite;
     }
   }
 
@@ -42,26 +43,38 @@
     padding-bottom: 2em;
     background-color: $color__background-body;
     &::before {
-      content: url('./assets/images/hibiscus_leaves.png');
+      content: url('../assets/images/hibiscus_leaves.png');
       position: absolute;
       left: 50%;
       top: 8em;
       z-index: -1;
     }
     &::after {
-      content: url('./assets/images/Hibiscus.png');
+      content: url('../assets/images/Hibiscus.png');
       position: absolute;
       left: calc(50% + 414px);
       top: 2em;
+      animation: rotateFlowers 10000ms linear infinite;
     }
   }
+
+  /***Animation flowers***/
+  @keyframes rotateFlowers {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /***Fin***/
 
   #characters {
     margin: 6em;
     display: flex;
     text-align: center;
     h3 {
-      background-image: url("./assets/images/orange_characters_bg.png");
+      background-image: url("../assets/images/orange_characters_bg.png");
     }
     div {
       flex: 1
@@ -78,12 +91,12 @@
   }
   #place {
     display: flex;
-    background-image: url("./assets/images/place_bg.png");
+    background-image: url("../assets/images/place_bg.png");
     width: 100%;
     min-height: 699px;
     background-size: cover;
     h3 {
-      background-image: url("./assets/images/orange_place_bg.png");
+      background-image: url("../assets/images/orange_place_bg.png");
       margin-bottom: -1em;
     }
     > div {
@@ -106,15 +119,15 @@
   margin-top: 3em;
  h2 {
     overflow: hidden;
-    background-image: url("./assets/images/purple_studio_bg.png");
+    background-image: url("../assets/images/purple_studio_bg.png");
     &::before {
-      content: url('./assets/images/random_flower.png');
+      content: url('../assets/images/random_flower.png');
       position: absolute;
       left: -1em;
       top: 0;
     }
     &::after {
-      content: url('./assets/images/flower.png');
+      content: url('../assets/images/flower.png');
       position: absolute;
       right: 1em;
       top: 1.2em;
@@ -127,7 +140,7 @@
     width: 66.66%;
     margin: auto;
     &::before {
-      content: url('./assets/images/trple-leaf.png');
+      content: url('../assets/images/trple-leaf.png');
       position: absolute;
       left: calc(50% - 17.225px);
       top: 40%;
@@ -138,16 +151,34 @@
   }
 }
 
+/***Section nomination aux Oscars***/
 #nomination{
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 100px;
-  
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 10vh;;
   p{
     color: $color__background-body;
-    width: 60%;
+    font-family: $font__titles;
+    font-weight: bold;
+    font-size: 35px;
+    width: 85%;
+    padding-left: 2em;
   }
+  .nomination__oscars{
+    background-image: url(../assets/images/orange-bg-nomination.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+    height: 30vh;
+  }
+  img{
+    height: fit-content;
+    padding-top: 2em;
+  }
+
 }
 
 
@@ -175,7 +206,7 @@
       }
 
       &::after {
-        content: url('./assets/images/Hibiscus.png');
+        content: url('../assets/images/Hibiscus.png');
         position: absolute;
         left: calc(33% + 414px);
         top: 9em;

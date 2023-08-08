@@ -564,13 +564,13 @@ table {
   overflow: hidden;
 }
 .site-footer::before {
-  content: url("./assets/images/Sunflower.png");
+  content: url("../assets/images/Sunflower.png");
   position: absolute;
   left: 4em;
   top: 0em;
 }
 .site-footer::after {
-  content: url("./assets/images/orchid.png");
+  content: url("../assets/images/orchid.png");
   position: absolute;
   right: -4em;
   bottom: 7.8em;
@@ -590,7 +590,7 @@ table {
   text-decoration: none;
 }
 .site-footer ul::after {
-  content: url("./assets/images/hibiscus_footer.png");
+  content: url("../assets/images/hibiscus_footer.png");
   position: absolute;
   left: calc(50% - 323px);
   bottom: -28.5em;
@@ -707,7 +707,7 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 .banner {
-  background-image: url("../../force/assets/images/banner.png");
+  background-image: url("../assets/images/banner.png");
   min-height: 806px;
   background-size: cover;
   display: flex;
@@ -724,19 +724,22 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /***Animation flowers***/
+  /***Fin***/
 }
 .story h2::before {
-  content: url("./assets/images/sunflower_leaves.png");
+  content: url("../assets/images/sunflower_leaves.png");
   position: absolute;
   left: 0;
   top: 1.8em;
   z-index: -1;
 }
 .story h2::after {
-  content: url("./assets/images/Sunflower.png");
+  content: url("../assets/images/Sunflower.png");
   position: absolute;
   left: 0.7em;
   top: 6em;
+  animation: rotateFlowers 10000ms linear infinite;
 }
 .story__article {
   display: flex;
@@ -749,17 +752,26 @@ textarea {
   background-color: #FFF5E9;
 }
 .story__article::before {
-  content: url("./assets/images/hibiscus_leaves.png");
+  content: url("../assets/images/hibiscus_leaves.png");
   position: absolute;
   left: 50%;
   top: 8em;
   z-index: -1;
 }
 .story__article::after {
-  content: url("./assets/images/Hibiscus.png");
+  content: url("../assets/images/Hibiscus.png");
   position: absolute;
   left: calc(50% + 414px);
   top: 2em;
+  animation: rotateFlowers 10000ms linear infinite;
+}
+@keyframes rotateFlowers {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .story #characters {
   margin: 6em;
@@ -767,7 +779,7 @@ textarea {
   text-align: center;
 }
 .story #characters h3 {
-  background-image: url("./assets/images/orange_characters_bg.png");
+  background-image: url("../assets/images/orange_characters_bg.png");
 }
 .story #characters div {
   flex: 1;
@@ -783,13 +795,13 @@ textarea {
 }
 .story #place {
   display: flex;
-  background-image: url("./assets/images/place_bg.png");
+  background-image: url("../assets/images/place_bg.png");
   width: 100%;
   min-height: 699px;
   background-size: cover;
 }
 .story #place h3 {
-  background-image: url("./assets/images/orange_place_bg.png");
+  background-image: url("../assets/images/orange_place_bg.png");
   margin-bottom: -1em;
 }
 .story #place > div {
@@ -810,16 +822,16 @@ textarea {
 }
 #studio h2 {
   overflow: hidden;
-  background-image: url("./assets/images/purple_studio_bg.png");
+  background-image: url("../assets/images/purple_studio_bg.png");
 }
 #studio h2::before {
-  content: url("./assets/images/random_flower.png");
+  content: url("../assets/images/random_flower.png");
   position: absolute;
   left: -1em;
   top: 0;
 }
 #studio h2::after {
-  content: url("./assets/images/flower.png");
+  content: url("../assets/images/flower.png");
   position: absolute;
   right: 1em;
   top: 1.2em;
@@ -831,7 +843,7 @@ textarea {
   margin: auto;
 }
 #studio > div::before {
-  content: url("./assets/images/trple-leaf.png");
+  content: url("../assets/images/trple-leaf.png");
   position: absolute;
   left: calc(50% - 17.225px);
   top: 40%;
@@ -840,15 +852,33 @@ textarea {
   width: 44.5%;
 }
 
+/***Section nomination aux Oscars***/
 #nomination {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 100px;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 10vh;
 }
 #nomination p {
   color: #FFF5E9;
-  width: 60%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  width: 85%;
+  padding-left: 2em;
+}
+#nomination .nomination__oscars {
+  background-image: url(../assets/images/orange-bg-nomination.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 70%;
+  height: 30vh;
+}
+#nomination img {
+  height: fit-content;
+  padding-top: 2em;
 }
 
 @media all and (max-width: 1192px) {
@@ -867,7 +897,7 @@ textarea {
     top: 15em;
   }
   .story__article::after {
-    content: url("./assets/images/Hibiscus.png");
+    content: url("../assets/images/Hibiscus.png");
     position: absolute;
     left: calc(33% + 414px);
     top: 9em;
