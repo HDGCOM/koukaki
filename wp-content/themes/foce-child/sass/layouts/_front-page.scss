@@ -5,17 +5,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   img {
     margin-top: -10%;
-    width: 50%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInLogo 1000ms ease forwards;
+  }
+  opacity: 0; 
+  transform: translateY(-50px); 
+  animation: fadeIn 1000ms ease forwards;
+}
+
+/***Animation FadeIn sections & Logo***/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***Fin***/
 
 .story {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
+
+
   h2{
     &::before {
       content: url('../assets/images/sunflower_leaves.png');
@@ -60,10 +96,10 @@
 
   /***Animation flowers***/
   @keyframes rotateFlowers {
-    0% {
+    from {
       transform: rotate(0deg);
     }
-    100% {
+    to {
       transform: rotate(360deg);
     }
   }
@@ -117,6 +153,10 @@
 #studio {
   position: relative;
   margin-top: 3em;
+
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
+
  h2 {
     overflow: hidden;
     background-image: url("../assets/images/purple_studio_bg.png");
@@ -157,7 +197,10 @@
   flex-wrap: wrap;
   width: 75%;
   margin: 0 auto;
-  padding-top: 10vh;;
+  padding-top: 10vh;
+
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
   p{
     color: $color__background-body;
     font-family: $font__titles;
@@ -275,5 +318,4 @@
       }
     }
   }
-
 }

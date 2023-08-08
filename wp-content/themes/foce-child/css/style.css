@@ -713,17 +713,47 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeIn 1000ms ease forwards;
 }
 .banner img {
   margin-top: -10%;
-  width: 50%;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
 }
 
+/***Animation FadeIn sections & Logo***/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***Fin***/
 .story {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
   /***Animation flowers***/
   /***Fin***/
 }
@@ -766,10 +796,10 @@ textarea {
   animation: rotateFlowers 10000ms linear infinite;
 }
 @keyframes rotateFlowers {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -819,6 +849,8 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
 }
 #studio h2 {
   overflow: hidden;
@@ -859,6 +891,8 @@ textarea {
   width: 75%;
   margin: 0 auto;
   padding-top: 10vh;
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
 }
 #nomination p {
   color: #FFF5E9;
