@@ -412,7 +412,7 @@ h6 {
 h2 {
   color: #FFF5E9;
   font-size: 4.429rem;
-  background-image: url("./assets/images/purple_title_bg.png");
+  background-image: url("../assets/images/purple_title_bg.png");
   background-color: #FFF5E9;
   background-repeat: no-repeat;
   background-size: contain;
@@ -719,7 +719,7 @@ textarea {
 }
 .banner img {
   margin-top: -10%;
-  width: 100%;
+  width: 50%;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInLogo 1000ms ease forwards;
@@ -754,8 +754,6 @@ textarea {
   align-items: center;
   transform: translateY(50px);
   animation: fadeInLogo 1000ms ease forwards;
-  /***Animation flowers***/
-  /***Fin***/
 }
 .story h2::before {
   content: url("../assets/images/sunflower_leaves.png");
@@ -795,6 +793,8 @@ textarea {
   top: 2em;
   animation: rotateFlowers 10000ms linear infinite;
 }
+
+/***Animation flowers***/
 @keyframes rotateFlowers {
   from {
     transform: rotate(0deg);
@@ -803,38 +803,40 @@ textarea {
     transform: rotate(360deg);
   }
 }
-.story #characters {
+/***Fin***/
+#characters {
   margin: 6em;
   display: flex;
   text-align: center;
 }
-.story #characters h3 {
+#characters h3 {
   background-image: url("../assets/images/orange_characters_bg.png");
 }
-.story #characters div {
+#characters div {
   flex: 1;
 }
-.story #characters .other-characters {
+#characters .other-characters {
   display: flex;
   flex-wrap: wrap;
 }
-.story #characters .other-characters figure {
+#characters .other-characters figure {
   width: 50%;
   padding: 2% 10%;
   margin: 0;
 }
-.story #place {
+
+#place {
   display: flex;
   background-image: url("../assets/images/place_bg.png");
   width: 100%;
   min-height: 699px;
   background-size: cover;
 }
-.story #place h3 {
+#place h3 {
   background-image: url("../assets/images/orange_place_bg.png");
   margin-bottom: -1em;
 }
-.story #place > div {
+#place > div {
   max-width: 580px;
   display: flex;
   flex-direction: column;
@@ -842,7 +844,7 @@ textarea {
   align-items: flex-start;
   margin-left: 6em;
 }
-.story #place > div p {
+#place > div p {
   padding-left: 5em;
 }
 

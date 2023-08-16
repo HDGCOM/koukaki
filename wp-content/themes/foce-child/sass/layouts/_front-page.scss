@@ -47,11 +47,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   transform: translateY(50px);
   animation: fadeInLogo 1000ms ease forwards;
-
-
   h2{
     &::before {
       content: url('../assets/images/sunflower_leaves.png');
@@ -68,6 +65,8 @@
       animation: rotateFlowers 10000ms linear infinite;
     }
   }
+
+  
 
   &__article {
     display: flex;
@@ -92,63 +91,63 @@
       top: 2em;
       animation: rotateFlowers 10000ms linear infinite;
     }
-  }
-
-  /***Animation flowers***/
-  @keyframes rotateFlowers {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  /***Fin***/
-
-  #characters {
-    margin: 6em;
-    display: flex;
-    text-align: center;
-    h3 {
-      background-image: url("../assets/images/orange_characters_bg.png");
-    }
-    div {
-      flex: 1
-    }
-    .other-characters {
-      display: flex;
-      flex-wrap: wrap;
-      figure {
-        width: 50%;
-        padding: 2% 10%;
-        margin: 0;
-      }
-    }
-  }
-  #place {
-    display: flex;
-    background-image: url("../assets/images/place_bg.png");
-    width: 100%;
-    min-height: 699px;
-    background-size: cover;
-    h3 {
-      background-image: url("../assets/images/orange_place_bg.png");
-      margin-bottom: -1em;
-    }
-    > div {
-      max-width: 580px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin-left: 6em;
-      p {
-        padding-left: 5em;
-      }
-    }
+   
   }
 }
 
+ /***Animation flowers***/
+ @keyframes rotateFlowers {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/***Fin***/
+
+#characters {
+  margin: 6em;
+  display: flex;
+  text-align: center;
+  h3 {
+    background-image: url("../assets/images/orange_characters_bg.png");
+  }
+  div {
+    flex: 1
+  }
+  .other-characters {
+    display: flex;
+    flex-wrap: wrap;
+    figure {
+      width: 50%;
+      padding: 2% 10%;
+      margin: 0;
+    }
+  }
+}
+#place {
+  display: flex;
+  background-image: url("../assets/images/place_bg.png");
+  width: 100%;
+  min-height: 699px;
+  background-size: cover;
+  h3 {
+    background-image: url("../assets/images/orange_place_bg.png");
+    margin-bottom: -1em;
+  }
+  > div {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 6em;
+    p {
+      padding-left: 5em;
+    }
+  }
+}
 
 #studio {
   position: relative;
@@ -186,7 +185,7 @@
       top: 40%;
     }
     p{
-    width: 44.5%
+      width: 44.5%;
     }
   }
 }
