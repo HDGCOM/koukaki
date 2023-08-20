@@ -153,7 +153,7 @@
   position: relative;
   margin-top: 3em;
 
-  transform: translateY(50px);
+  /*transform: translateY(50px);*/
   animation: fadeInLogo 1000ms ease forwards;
 
  h2 {
@@ -173,8 +173,8 @@
     }
 
     span{
-      /*opacity: 0;*/
-      transform: translateY(20px);
+      opacity: 0;
+      transform: translateY(50px);
     }
   }
 
@@ -196,10 +196,10 @@
 }
 
 /***Animation title scroll***/
-@keyframes fadeInUp {
+@keyframes fadeInUpTitle {
   from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(50px);
   }
   to {
       opacity: 1;
@@ -208,7 +208,7 @@
 }
 
 .animated {
-  animation: fadeInUp 0.5s forwards;
+  animation: fadeInUpTitle 5s forwards;
 }
 
 /***Section nomination aux Oscars***/
