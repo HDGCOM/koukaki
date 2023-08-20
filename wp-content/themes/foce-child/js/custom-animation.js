@@ -1,6 +1,5 @@
-// animation.js
 (function($) {
-    $(document).ready(function() {
+    jQuery(document).ready(function($) {
         const spans = document.querySelectorAll('#studio h2 span');
         let delay = 0;
 

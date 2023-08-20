@@ -4,6 +4,9 @@
   padding-top: 18em;
   padding-bottom: 1em;
   overflow: hidden;
+
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
   
 
   &::before {
@@ -42,6 +45,18 @@
     }
   }
 }
+/***Animation footer***/
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media all and (max-width: #{$breakpoint__small_tablet}) {
   .site-footer {
     &::before {

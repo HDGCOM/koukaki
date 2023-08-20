@@ -562,6 +562,8 @@ table {
   padding-top: 18em;
   padding-bottom: 1em;
   overflow: hidden;
+  transform: translateY(50px);
+  animation: fadeInLogo 1000ms ease forwards;
 }
 .site-footer::before {
   content: url("../assets/images/Sunflower.png");
@@ -597,6 +599,17 @@ table {
   z-index: -1;
 }
 
+/***Animation footer***/
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media all and (max-width: 920px) {
   .site-footer::before {
     content: "";
@@ -851,7 +864,7 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
-  /*transform: translateY(50px);*/
+  transform: translateY(50px);
   animation: fadeInLogo 1000ms ease forwards;
 }
 #studio h2 {
@@ -872,7 +885,7 @@ textarea {
 }
 #studio h2 span {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(20px);
 }
 #studio > div {
   display: flex;
@@ -890,19 +903,19 @@ textarea {
   width: 44.5%;
 }
 
-/***Animation title scroll***/
+/***Animation Studio title scroll***/
 @keyframes fadeInUpTitle {
   from {
+    transform: translateY(20px);
     opacity: 0;
-    transform: translateY(50px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 .animated {
-  animation: fadeInUpTitle 5s forwards;
+  animation: fadeInUpTitle 1500ms forwards;
 }
 
 /***Section nomination aux Oscars***/
