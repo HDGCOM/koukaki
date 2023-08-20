@@ -171,6 +171,11 @@
       right: 1em;
       top: 1.2em;
     }
+
+    span{
+      /*opacity: 0;*/
+      transform: translateY(20px);
+    }
   }
 
   > div {
@@ -188,6 +193,22 @@
       width: 44.5%;
     }
   }
+}
+
+/***Animation title scroll***/
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: fadeInUp 0.5s forwards;
 }
 
 /***Section nomination aux Oscars***/

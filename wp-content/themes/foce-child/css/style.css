@@ -870,6 +870,10 @@ textarea {
   right: 1em;
   top: 1.2em;
 }
+#studio h2 span {
+  /*opacity: 0;*/
+  transform: translateY(20px);
+}
 #studio > div {
   display: flex;
   justify-content: space-between;
@@ -884,6 +888,21 @@ textarea {
 }
 #studio > div p {
   width: 44.5%;
+}
+
+/***Animation title scroll***/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animated {
+  animation: fadeInUp 0.5s forwards;
 }
 
 /***Section nomination aux Oscars***/
