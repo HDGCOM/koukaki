@@ -851,7 +851,7 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
-  transform: translateY(50px);
+  /*transform: translateY(50px);*/
   animation: fadeInLogo 1000ms ease forwards;
 }
 #studio h2 {
@@ -871,8 +871,8 @@ textarea {
   top: 1.2em;
 }
 #studio h2 span {
-  /*opacity: 0;*/
-  transform: translateY(20px);
+  opacity: 0;
+  transform: translateY(50px);
 }
 #studio > div {
   display: flex;
@@ -891,10 +891,10 @@ textarea {
 }
 
 /***Animation title scroll***/
-@keyframes fadeInUp {
+@keyframes fadeInUpTitle {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -902,7 +902,7 @@ textarea {
   }
 }
 .animated {
-  animation: fadeInUp 0.5s forwards;
+  animation: fadeInUpTitle 5s forwards;
 }
 
 /***Section nomination aux Oscars***/

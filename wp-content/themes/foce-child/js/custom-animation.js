@@ -11,7 +11,7 @@
                         setTimeout(() => {
                             span.classList.add('animated');
                         }, delay);
-                        delay += 100; // Delay between each word animation
+                        delay += 300; // Delay between each word animation
                     });
                     return;
                 }
