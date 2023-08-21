@@ -10,7 +10,7 @@
                         setTimeout(() => {
                             span.classList.add('animated');
                         }, delay);
-                        delay += 200; // Delay between each word animation
+                        delay += 500; // Delay between each word animation
                     });
                     return;
                 }

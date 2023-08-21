@@ -870,6 +870,9 @@ textarea {
 #studio h2 {
   overflow: hidden;
   background-image: url("../assets/images/purple_studio_bg.png");
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 #studio h2::before {
   content: url("../assets/images/random_flower.png");
@@ -884,6 +887,7 @@ textarea {
   top: 1.2em;
 }
 #studio h2 span {
+  display: block;
   opacity: 0;
   transform: translateY(50px);
 }
