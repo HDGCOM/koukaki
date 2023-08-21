@@ -1,5 +1,5 @@
 (function($) {
-    jQuery(document).ready(function($) {
+    jQuery(document).ready(function() {
         const spans = document.querySelectorAll('#studio h2 span');
         let delay = 0;
 
@@ -10,7 +10,7 @@
                         setTimeout(() => {
                             span.classList.add('animated');
                         }, delay);
-                        delay += 300; // Delay between each word animation
+                        delay += 200; // Delay between each word animation
                     });
                     return;
                 }
