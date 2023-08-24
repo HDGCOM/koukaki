@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0; 
+  transform: translateY(-50px); 
+  animation: fadeIn 1000ms ease forwards;
 
   .video-background {
     position: absolute;
@@ -21,21 +24,20 @@
     }
   }
 
-
   .content {
     position: relative;
     z-index: 1;
+    width: 100%;
+    text-align: center;
     img {
       margin-top: -10%;
       width: 50%;
       opacity: 0;
       transform: translateY(50px);
-      animation: fadeInLogo 1000ms ease forwards;
+      animation: fadeInLogo 1000ms ease forwards, floatLogo 3000ms infinite alternate;
     }
   }
-  opacity: 0; 
-  transform: translateY(-50px); 
-  animation: fadeIn 1000ms ease forwards;
+  
 }
 
 /***Animation FadeIn sections & Logo***/
@@ -60,7 +62,18 @@
     transform: translateY(0);
   }
 }
-/***Fin***/
+/***Animation floatlogo***/
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px); 
+  }
+}
+
+/***Animation ParallaxLogo***/
+
 
 .story {
   position: relative;

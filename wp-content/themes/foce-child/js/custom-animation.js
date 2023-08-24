@@ -26,3 +26,16 @@
         observer.observe(document.querySelector('#studio'));
     });
 })(jQuery);
+
+(function($) {
+    jQuery(document).ready(function() {
+        var logo = $('.content');
+        var logoOffset = logo.offset().top;
+      
+        jQuery(window).scroll(function() {
+          var scrollTop = $(window).scrollTop();
+          var parallaxValue = (scrollTop - logoOffset) * 0.25; // Ajustez le coefficient pour le parallaxe
+          logo.css('transform', 'translateY(' + parallaxValue + 'px)');
+        }); 
+    });
+}) (jQuery);
