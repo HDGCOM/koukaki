@@ -25,17 +25,34 @@
 
         observer.observe(document.querySelector('#studio'));
     });
-})(jQuery);
 
-(function($) {
     jQuery(document).ready(function() {
         var logo = $('.content');
         var logoOffset = logo.offset().top;
       
-        jQuery(window).scroll(function() {
-          var scrollTop = $(window).scrollTop();
-          var parallaxValue = (scrollTop - logoOffset) * 0.25; // Ajustez le coefficient pour le parallaxe
-          logo.css('transform', 'translateY(' + parallaxValue + 'px)');
-        }); 
+        setTimeout(function(){
+            jQuery(window).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var parallaxValue = (scrollTop - logoOffset) * 0.25;
+            logo.css('transform', 'translateY(' + parallaxValue + 'px)');
+            });
+        }, 3000);
     });
-}) (jQuery);
+
+    jQuery(document).ready(function() {
+        const clouds = $('.cloud');
+        const amplitude = 300;
+        const placeOffset = $('#characters').offset().top;
+
+        jQuery(window).on('scroll', function() {
+            const scrollPosition = $(this).scrollTop();
+
+            if (scrollPosition >= placeOffset) {
+                const displacement = -amplitude * ((scrollPosition - placeOffset) / $(window).height());
+                clouds.each(function() {
+                    $(this).css('transform', `translateX(${displacement}px)`);
+                });
+            }
+        });
+    });
+})(jQuery);

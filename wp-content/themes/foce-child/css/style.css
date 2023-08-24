@@ -750,11 +750,11 @@ textarea {
   text-align: center;
 }
 .banner .content img {
-  margin-top: -10%;
+  margin-top: 0;
   width: 50%;
   opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInLogo 1000ms ease forwards, floatLogo 3000ms infinite alternate;
+  transform: translateY(80px);
+  animation: fadeInLogo 1000ms ease forwards, floatLogo 3000ms ease-in-out infinite alternate 1000ms;
 }
 
 /***Animation FadeIn sections & Logo***/
@@ -771,7 +771,7 @@ textarea {
 @keyframes fadeInLogo {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(80px);
   }
   to {
     opacity: 1;
@@ -872,12 +872,13 @@ textarea {
   width: 100%;
   min-height: 699px;
   background-size: cover;
+  flex-direction: row-reverse;
 }
 #place h3 {
   background-image: url("../assets/images/orange_place_bg.png");
   margin-bottom: -1em;
 }
-#place > div {
+#place .placecontent {
   max-width: 580px;
   display: flex;
   flex-direction: column;
@@ -885,8 +886,22 @@ textarea {
   align-items: flex-start;
   margin-left: 6em;
 }
-#place > div p {
+#place .placecontent p {
   padding-left: 5em;
+}
+#place #nuages {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 250px;
+  margin: 50px 150px 0 0;
+}
+#place #nuages .cloud {
+  height: auto;
+  filter: blur(10px);
+}
+#place #nuages .big {
+  margin: 0 0 100px 100px;
 }
 
 #studio {

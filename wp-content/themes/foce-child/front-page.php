@@ -57,7 +57,12 @@ get_header();
                 </div>
             </article>
             <article id="place">
-                <div>
+                <div id="nuages">
+                <img class="cloud small" src="<?php echo get_template_directory_uri() . '/assets/images/little_cloud.png'; ?> " alt="Petit nuage">
+                <img class="cloud big" src="<?php echo get_template_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="Grand nuage">
+                </div>
+
+                <div class="placecontent">
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
