@@ -7,7 +7,6 @@ function theme_enqueue_styles() {
     //wp_enqueue_script('jquery');
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_swiper_scripts');
 
 // Get customizer options form parent theme
 if ( get_stylesheet() !== get_template() ) {
