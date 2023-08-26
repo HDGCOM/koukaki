@@ -7,6 +7,8 @@ function theme_enqueue_styles() {
     //wp_enqueue_script('jquery');
 }
 
+add_action('wp_enqueue_scripts', 'enqueue_swiper_scripts');
+
 // Get customizer options form parent theme
 if ( get_stylesheet() !== get_template() ) {
     add_filter( 'pre_update_option_theme_mods_' . get_stylesheet(), function ( $value, $old_value ) {

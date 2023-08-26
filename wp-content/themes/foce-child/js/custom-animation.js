@@ -56,8 +56,3 @@
         });
     });
 })(jQuery);
-
-import Swiper from "swiper";
-import 'swiper/swiper-bundle.css';
-import 'swiper/css';
-const swiper = new Swiper();
