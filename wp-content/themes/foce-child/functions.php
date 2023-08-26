@@ -7,6 +7,16 @@ function theme_enqueue_styles() {
     //wp_enqueue_script('jquery');
 }
 
+//Swiper code
+function enqueue_custom_script() {
+    // Enregistrement de Swiper depuis le site npm
+    wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array('jquery'), null, true);
+
+    // Enregistrement de votre fichier JavaScript personnalisé
+    wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/swiper-carrousel.js', array('swiper'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+
 
 // Get customizer options form parent theme
 if ( get_stylesheet() !== get_template() ) {
