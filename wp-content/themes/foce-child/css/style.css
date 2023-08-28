@@ -864,7 +864,7 @@ textarea {
 .story #characters .swiper-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .story #characters .swiper-wrapper {
   display: flex;
