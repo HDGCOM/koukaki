@@ -30,10 +30,10 @@ get_header();
             );
             $characters_query = new WP_Query($args);
             ?>
-            <article id="characters">
-                <div class="main-character">
+            <article id="character">
+                <!--<div class="main-character">
                     <h3>Les personnages</h3>
-                    <?php
+                   <?php
                     $main_character = $characters_query->posts[0];
                     echo '<figure>';
                     echo get_the_post_thumbnail( $main_character->ID, 'full' );
@@ -54,10 +54,11 @@ get_header();
                         echo '</figure>';
                     }
                     ?>
-                </div>
+                </div>-->
 
             </article>
-            <article class="swiper">
+            <article class="swiper" id="characters">
+                <h3>Les personnages</h3>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <?php

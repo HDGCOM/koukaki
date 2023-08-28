@@ -72,8 +72,16 @@
   }
 }
 
-/***Animation ParallaxLogo***/
-
+ /***Animation flowers***/
+ @keyframes rotateFlowers {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/***Fin***/
 
 .story {
   position: relative;
@@ -123,39 +131,43 @@
       animation: rotateFlowers 10000ms linear infinite;
     }
   }
-}
 
- /***Animation flowers***/
- @keyframes rotateFlowers {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/***Fin***/
-
-#characters {
-  margin: 6em;
-  display: flex;
-  text-align: center;
-  h3 {
-    background-image: url("../assets/images/orange_characters_bg.png");
-  }
-  div {
-    flex: 1
-  }
-  .other-characters {
+  #characters {
+    margin: 6em;
     display: flex;
+    text-align: center;
+  
     flex-wrap: wrap;
-    figure {
-      width: 50%;
-      padding: 2% 10%;
-      margin: 0;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 2em;
+    overflow: hidden;
+    h3 {
+      background-image: url("../assets/images/orange_characters_bg.png");
+    }
+    div {
+      flex: 1
+    }
+    .swiper-container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-around;
+      align-items: center;
     }
   }
 }
+
+
+
+
 #place {
   display: flex;
   background-image: url("../assets/images/place_bg.png");
