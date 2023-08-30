@@ -1,4 +1,5 @@
 (function($) {
+    //Animation titres
     jQuery(document).ready(function() {
         const spans = document.querySelectorAll('#studio h2 span');
         let delay = 0;
@@ -25,7 +26,7 @@
 
         observer.observe(document.querySelector('#studio'));
     });
-
+    //Parallax Logo
     jQuery(document).ready(function() {
         var logo = $('.content');
         var logoOffset = logo.offset().top;
@@ -38,7 +39,7 @@
             });
         }, 3000);
     });
-
+    //Animation nuages
     jQuery(document).ready(function() {
         const clouds = $('.cloud');
         const amplitude = 300;
@@ -55,4 +56,14 @@
             }
         });
     });
+    //Menu Bureger
+    /*jQuery(document).ready(function() {
+        jQuery(".menu-toggle").click(function() {
+            $(".menu").fadeToggle();
+        });
+    
+        jQuery(".menu").click(function() {
+            $(".menu").fadeOut();
+        });
+    });*/
 })(jQuery);
