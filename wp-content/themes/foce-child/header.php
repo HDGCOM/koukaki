@@ -39,7 +39,7 @@
                 <span></span>
             </button>
             <ul>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+                <li class="site-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/small-logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"></li>
                 <li><a href="#story">Histoire</a></li>
                 <li><a href="#characters">Personnages</a></li>
                 <li><a href="#place">Lieu</a></li>
