@@ -40,10 +40,10 @@
             </button>
             <ul>
                 <li class="site-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/small-logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"></li>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
+                <li class="titles-burger"><a href="#story">Histoire</a></li>
+                <li class="titles-burger"><a href="#characters">Personnages</a></li>
+                <li class="titles-burger"><a href="#place">Lieu</a></li>
+                <li class="titles-burger"><a href="#studio">Studio Koukaki</a></li>
             </ul>
 
 		</nav><!-- #site-navigation -->
