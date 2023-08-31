@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-( function() {
+/*( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
 	// Return early if the navigation doesn't exist.
@@ -72,7 +72,7 @@
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
-	function toggleFocus() {
+	/*function toggleFocus() {
 		if ( event.type === 'focus' || event.type === 'blur' ) {
 			let self = this;
 			// Move up through the ancestors of the current link until we hit .nav-menu.
@@ -96,17 +96,12 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
-}() );
+}() );*/
 
 (function($) {
-    //Menu Bureger
-    jQuery(document).ready(function() {
-        jQuery(".menu-toggle").click(function() {
-            $(".menu").fadeToggle();
-        });
-    
-        jQuery(".menu").click(function() {
-            $(".menu").fadeOut();
-        });
-    });
+	jQuery(document).ready(function(){
+		$('#nav-icon').click(function(){
+			$(this).toggleClass('open');
+		});
+	});
 })(jQuery);
