@@ -915,6 +915,7 @@ textarea {
 #studio {
   position: relative;
   margin-top: 3em;
+  overflow: hidden;
   transform: translateY(50px);
   animation: fadeInLogo 1000ms ease forwards;
 }
@@ -1076,7 +1077,8 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .site-header {
-  position: sticky;
+  position: fixed;
+  width: 1440px;
   top: 0;
   z-index: 9999;
 }
@@ -1128,6 +1130,9 @@ textarea {
   color: #000;
   text-shadow: 0 0 15px rgb(255, 92, 0);
 }
+.main-navigation li .animated {
+  animation: fadeInUpTitle 1500ms forwards 500ms;
+}
 .main-navigation a {
   display: block;
   text-decoration: none;
@@ -1148,66 +1153,117 @@ textarea {
 .main-navigation .menu-burger .nav-menu {
   background-color: #fff5e9;
   height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
   text-align: center;
   padding-top: 20px;
   overflow: hidden;
+  animation: fadeInMenu 1000ms ease forwards;
 }
 .main-navigation .menu-burger .nav-menu .site-logo::before {
   content: url(../assets/images/orchid.png);
   position: absolute;
-  left: -1em;
-  top: 1.1em;
+  left: -0.9em;
+  top: 0.9em;
+  animation: rotateFlowers 10000ms linear infinite;
 }
 .main-navigation .menu-burger .nav-menu .site-logo::after {
   content: url(../assets/images/Sunflower.png);
   position: absolute;
   transform: scale(1.3);
-  right: 3em;
-  top: 3em;
+  right: 3.5em;
+  top: 1.5em;
+  animation: rotateFlowers 10000ms linear infinite;
 }
 .main-navigation .menu-burger .nav-menu .purple-cat::before {
   content: url(../assets/images/purple-cat.png);
   position: absolute;
-  left: 1em;
-  top: 1em;
+  left: 4em;
+  bottom: 0em;
+  animation: floatcat 3000ms ease-in-out infinite alternate 500ms;
 }
 .main-navigation .menu-burger .nav-menu .random-flower::after {
   content: url(../assets/images/random_flower.png);
   position: absolute;
-  transform: scale(1.3);
-  right: 1em;
-  top: 1em;
+  right: -1.5em;
+  top: 0em;
+  transform: scale(0.3);
+  animation: rotateFlowers 10000ms linear infinite;
 }
 .main-navigation .menu-burger .nav-menu .black-cat::before {
   content: url(../assets/images/flower.png);
   position: absolute;
-  left: 1em;
-  top: 1em;
+  left: 3em;
+  bottom: 0em;
+  transform: scale(0.6);
+  animation: rotateFlowers 10000ms linear infinite;
 }
 .main-navigation .menu-burger .nav-menu .black-cat::after {
   content: url(../assets/images/black-cat.png);
   position: absolute;
-  transform: scale(1.3);
-  right: 1em;
-  top: 1em;
+  right: 3em;
+  top: 0em;
+  animation: floatcat 3000ms ease-in-out infinite alternate-reverse 1000ms;
 }
 .main-navigation .menu-burger .nav-menu .orange-cat::before {
   content: url(../assets/images/orange-cat.png);
   position: absolute;
   left: 1em;
-  top: 1em;
+  top: 2em;
+  animation: floatcat 3000ms ease-in-out infinite alternate 1500ms;
 }
 .main-navigation .menu-burger .nav-menu #small-title {
   font-size: 14px;
-  top: 100px;
+  top: 7em;
+  text-transform: uppercase;
 }
 .main-navigation .menu-burger .nav-menu #small-title::after {
   content: url(../assets/images/hibiscus_footer.png);
   position: absolute;
   right: -25em;
-  bottom: -10em;
+  bottom: -33em;
 }
 
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/***Animation floatcat***/
+@keyframes floatcat {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+/***Animation flowers***/
+@keyframes rotateFlowers {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/***Animation Studio title scroll***/
+@keyframes fadeInUpTitle {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {

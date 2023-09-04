@@ -210,7 +210,7 @@
 #studio {
   position: relative;
   margin-top: 3em;
-
+  overflow: hidden;
   transform: translateY(50px);
   animation: fadeInLogo 1000ms ease forwards;
 

@@ -26,13 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-        
         <nav id="site-navigation" class="main-navigation">
-            <!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>-->
             <div class="site-title">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </div>
@@ -42,16 +36,15 @@
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav">
                     <li class="site-logo"><img src="<?php echo get_template_directory_uri() . '/assets/images/small-logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants"></li>
                     <li class="titles-burger purple-cat"><a href="#story">Histoire</a></li>
                     <li class="titles-burger random-flower"><a href="#characters">Personnages</a></li>
                     <li class="titles-burger black-cat"><a href="#place">Lieu</a></li>
                     <li class="titles-burger orange-cat"><a href="#studio">Studio Koukaki</a></li>
-                    <li id="small-title"><a href="#">Studio Koukaki</a></li>
+                    <li id="small-title">Studio Koukaki</li>
                 </ul>
             </div>
-
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 </div>

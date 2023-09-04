@@ -1,5 +1,6 @@
 .site-header {
-	position: sticky;
+	position: fixed;
+	width: 1440px;
 	top:0;
 	z-index: 9999;
 
@@ -31,9 +32,9 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 20px;
-	.site-title {
-		display: none;
-	}
+		.site-title {
+			display: none;
+		}
 
 	}
 
@@ -45,6 +46,9 @@
 		&.focus > a {
 			color: #000;
 			text-shadow: 0 0 15px rgb(255, 92, 0);
+		}
+		.animated {
+			animation: fadeInUpTitle 1500ms forwards 500ms;
 		}
 	}
 
@@ -76,23 +80,29 @@
 		.nav-menu{
 			background-color: #fff5e9 ;
 			height: 100vh;
+			width: 100%;
+			position: absolute;
+			z-index: -1;
 			text-align: center;	
 			padding-top: 20px;
 			overflow: hidden;
+			animation: fadeInMenu 1000ms ease forwards;
 
 			.site-logo{
 				&::before{
 					content: url(../assets/images/orchid.png);
 					position: absolute;
-					left: -1em;
-					top: 1.1em;
+					left: -0.9em;
+					top: 0.9em;
+					animation: rotateFlowers 10000ms linear infinite;
 				}
 				&::after{
 					content: url(../assets/images/Sunflower.png);
 					position: absolute;
 					transform: scale(1.3);
-					right: 3em;
-					top: 3em;
+					right: 3.5em;
+					top: 1.5em;
+					animation: rotateFlowers 10000ms linear infinite;
 				}
 			}
 
@@ -100,32 +110,36 @@
 				&::before{
 					content: url(../assets/images/purple-cat.png);
 					position: absolute;
-					left: 1em;
-					top: 1em;
+					left: 4em;
+					bottom: 0em;
+					animation:floatcat 3000ms ease-in-out infinite alternate 500ms;
 				}
 			}
 			.random-flower{
 				&::after{
 					content: url(../assets/images/random_flower.png);
 					position: absolute;
-					transform: scale(1.3);
-					right: 1em;
-					top: 1em;
+					right: -1.5em;
+					top: 0em;
+					transform: scale(0.3);
+					animation: rotateFlowers 10000ms linear infinite;
 				}
 			}
 			.black-cat{
 				&::before{
 					content: url(../assets/images/flower.png);
 					position: absolute;
-					left: 1em;
-					top: 1em;
+					left: 3em;
+					bottom: 0em;
+					transform: scale(0.6);
+					animation: rotateFlowers 10000ms linear infinite;
 				}
 				&::after{
 					content: url(../assets/images/black-cat.png);
 					position: absolute;
-					transform: scale(1.3);
-					right: 1em;
-					top: 1em;
+					right: 3em;
+					top: 0em;
+					animation:floatcat 3000ms ease-in-out infinite alternate-reverse 1000ms;
 				}
 			}
 			.orange-cat{
@@ -133,19 +147,20 @@
 					content: url(../assets/images/orange-cat.png);
 					position: absolute;
 					left: 1em;
-					top: 1em;
+					top: 2em;
+					animation:floatcat 3000ms ease-in-out infinite alternate 1500ms;
 				}
 			}
 			
 			#small-title{
 				font-size: 14px;
-				top: 100px;
-
+				top: 7em;
+				text-transform: uppercase;
 				&::after{
 					content: url(../assets/images/hibiscus_footer.png);
-						position: absolute;
-						right: -25em;
-						bottom: -10em;
+					position: absolute;
+					right: -25em;
+					bottom: -33em;
 				}
 			}
 
@@ -153,6 +168,48 @@
 		}
 	}
 }
+
+@keyframes fadeInMenu {
+	from {
+	  opacity: 0;
+	  transform: translateY(-100%);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  /***Animation floatcat***/
+  @keyframes floatcat {
+	0%, 100% {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform: translateX(20px); 
+	}
+  }
+  
+   /***Animation flowers***/
+   @keyframes rotateFlowers {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+
+  /***Animation Studio title scroll***/
+@keyframes fadeInUpTitle {
+	from {
+	  transform: translateY(50px);  
+	  opacity: 0;
+	}
+	to {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
 
 /* Small menu. */
 .menu-toggle,

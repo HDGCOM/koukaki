@@ -13,6 +13,7 @@
                         }, delay);
                         delay += 500; // Delay between each word animation
                     });
+
                     return;
                 }
 
@@ -56,14 +57,4 @@
             }
         });
     });
-    //Menu Bureger
-    /*jQuery(document).ready(function() {
-        jQuery(".menu-toggle").click(function() {
-            $(".menu").fadeToggle();
-        });
-    
-        jQuery(".menu").click(function() {
-            $(".menu").fadeOut();
-        });
-    });*/
 })(jQuery);

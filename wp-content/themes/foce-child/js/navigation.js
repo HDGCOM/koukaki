@@ -104,4 +104,35 @@
 			$(this).toggleClass('open');
 		});
 	});
+
+	jQuery(document).ready(function() {
+		const links = document.querySelectorAll('#nav li a');
+		const delayIncrement = 500; // Délai entre chaque lien
+		let delay = 0;
+	
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					links.forEach((link, index) => {
+						setTimeout(() => {
+							link.classList.add('animated');
+						}, delay);
+						delay += delayIncrement;
+						//delay += 500; // Delay between each link animation
+					});
+	
+					return;
+				}
+	
+				links.forEach(link => {
+					link.classList.remove('animated');
+				});
+	
+				delay = 0; // Reset the delay when elements are out of the trigger range
+			});
+		});
+	
+		observer.observe(document.querySelector('#nav')); // Remplacez '#studio' par le sélecteur de l'élément déclencheur approprié
+	});
+	
 })(jQuery);
