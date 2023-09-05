@@ -27,6 +27,28 @@
 
         observer.observe(document.querySelector('#studio'));
     });
+
+    jQuery(document).ready(function() {
+        const spanElement = document.querySelector('.story h2 span');
+    
+        if (spanElement) {
+           
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        spanElement.classList.add('animated');
+                    } else {
+                        spanElement.classList.remove('animated');
+                    }
+                });
+            });
+           
+            observer.observe(spanElement);
+        } else {
+            console.error("L'élément '.story h2 span' n'existe pas dans le document.");
+        }
+    });
+
     //Parallax Logo
     jQuery(document).ready(function() {
         var logo = $('.content');

@@ -819,6 +819,11 @@ textarea {
   top: 6em;
   animation: rotateFlowers 10000ms linear infinite;
 }
+.story h2 span {
+  display: block;
+  opacity: 0;
+  transform: translateY(50px);
+}
 .story__article {
   display: flex;
   flex-direction: column;
@@ -1077,7 +1082,7 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .site-header {
-  position: fixed;
+  position: sticky;
   width: 1440px;
   top: 0;
   z-index: 9999;

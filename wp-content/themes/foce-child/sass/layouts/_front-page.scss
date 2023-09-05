@@ -105,6 +105,11 @@
       top: 6em;
       animation: rotateFlowers 10000ms linear infinite;
     }
+    span{
+      display: block;
+      opacity: 0;
+      transform: translateY(50px);
+    }
   }
   &__article {
     display: flex;

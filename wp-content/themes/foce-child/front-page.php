@@ -16,9 +16,9 @@ get_header();
             </div>
         </section>
         <section id="#story" class="story">
-            <h2>L'histoire</h2>
+            <h2><span>L'histoire</span></h2>
             <article id="" class="story__article">
-                <p class="no-animate"><?php echo get_theme_mod('story'); ?></p>
+                <p><?php echo get_theme_mod('story'); ?></p>
             </article>
             
             <article class="swiper" id="characters">
