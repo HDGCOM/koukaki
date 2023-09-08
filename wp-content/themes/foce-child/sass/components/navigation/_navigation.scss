@@ -259,18 +259,6 @@
 }
 
 /*Icon Menu Berger*/
-/*
-#nav-icon {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  margin: 15px auto;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  right: 150px;
-}
-
 #nav-icon span {
   display: block;
   position: absolute;
@@ -318,7 +306,7 @@
   top: 39px;
   left: 8px;
 }
-*/
+
 
 
 #nav-icon {
@@ -372,4 +360,121 @@
 			left: 8px;
 		}
 	}
+}
+
+@media all and (max-width: #{$breakpoint__large_phone}) {
+
+	.site-header{
+		width: 100%;
+		.main-navigation{
+			.site-title{
+			  font-size: 1.2rem;
+			  text-align: left;
+			}
+			.menu-burger{
+				#nav-icon{
+					right: 0;
+					top: 0.8em;
+					span {
+						height: 1px;
+						width: 50%;
+						&:nth-child(2) {
+							top: 9px;
+						}
+						&:nth-child(3) {
+							top: 18px;
+						}
+					}
+				}
+
+				.nav-menu{
+					.site-logo{
+						&::before{
+							scale: 0.3;
+							top: -2em;
+							left: -1em;
+						}
+						&::after{
+							scale: 0.6;
+							right: -1em;
+							top: -1em;
+						}
+					}
+		
+					.purple-cat{
+						&::before{
+							left: -1em;
+							bottom: -4em;
+							scale: 0.6;
+							rotate: 30deg;
+						
+						}
+					}
+					.random-flower{
+						&::after{
+							right: -3.5em;
+							top: 0em;
+							scale: 0.3;
+						}
+					}
+					.black-cat{
+						&::before{
+							left: 2em;
+							bottom: -5em;
+							scale: 0.4;
+						}
+						&::after{
+							right: 1em;
+							top: 5em;
+							rotate: -15deg;
+						}
+					}
+					.orange-cat{
+						&::before{
+							left: 0em;
+							top: 10em;
+						}
+					}
+					
+					#small-title{
+						font-size: 14px;
+						top: 25em;
+						text-transform: uppercase;
+						padding-top: 30px;
+						&::after{
+							right: -24em;
+							bottom: -25em;
+							scale: 0.5;
+						}
+					}
+				}
+			}	
+			li {
+				position: relative;
+				font-size: 2rem;
+				line-height: 1.5em;
+			}
+		}
+	} 
+
+	#nav-icon.open {
+		span {
+			&:nth-child(1) {
+				transform: rotate(45deg);
+				top: -3px;
+				left: 8px;
+			}
+			&:nth-child(2) {
+				width: 0%;
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+				top: 39px;
+				left: 8px;
+			}
+		}
+	}
+	  
+
 }

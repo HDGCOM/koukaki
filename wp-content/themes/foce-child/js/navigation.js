@@ -132,7 +132,7 @@
 			});
 		});
 	
-		observer.observe(document.querySelector('#nav')); // Remplacez '#studio' par le sélecteur de l'élément déclencheur approprié
+		observer.observe(document.querySelector('#nav')); 
 	});
 	
 })(jQuery);

@@ -616,8 +616,21 @@ table {
   }
 }
 @media all and (max-width: 700px) {
+  .site-footer {
+    padding-top: 15em;
+    padding-bottom: 2em;
+  }
   .site-footer::after {
     content: "";
+  }
+  .site-footer ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .site-footer ul::after {
+    top: 0;
+    scale: 0.6;
+    filter: blur(0.5em);
   }
 }
 /* Links
@@ -719,6 +732,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+html {
+  overflow-x: hidden;
+}
+
 .banner {
   background-image: url("../assets/images/banner.png");
   min-height: 806px;
@@ -1075,6 +1092,77 @@ textarea {
   #studio h2::before {
     content: "";
   }
+  .banner {
+    min-height: 30vh;
+  }
+  .banner .video-background {
+    display: none;
+  }
+  .story {
+    padding-top: 30px;
+  }
+  .story #characters {
+    margin: 0em;
+    padding-left: 0em;
+  }
+  .story #characters h3 {
+    background-size: cover;
+    width: max-content;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  .story #characters .swiper-container .swiper-wrapper .swiper-slide figure img {
+    width: 90%;
+  }
+  .story__article {
+    text-align: left;
+  }
+  .story #place {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+  .story #place > div {
+    margin: 0 auto;
+    width: 75%;
+  }
+  .story #place > div h3 {
+    margin: 0 auto;
+  }
+  .story #place > div p {
+    padding-left: 0;
+    padding-bottom: 2em;
+  }
+  .story #place #nuages {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    position: relative;
+    left: 5em;
+  }
+  .story #place #nuages .small {
+    width: 50%;
+  }
+  .story #place #nuages .big {
+    margin: 0 0 50px 50px;
+  }
+  #studio {
+    margin-top: 0;
+  }
+  #nomination {
+    justify-content: center;
+    padding-top: 5vh;
+    width: 90%;
+  }
+  #nomination p {
+    font-size: 1.2rem;
+    padding-top: 0.5em;
+    width: 100%;
+  }
+  #nomination .nomination__oscars {
+    width: 100%;
+    height: 15vh;
+  }
 }
 /*--------------------------------------------------------------
 # Components
@@ -1314,18 +1402,6 @@ textarea {
 }
 
 /*Icon Menu Berger*/
-/*
-#nav-icon {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  margin: 15px auto;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  right: 150px;
-}
-
 #nav-icon span {
   display: block;
   position: absolute;
@@ -1373,7 +1449,7 @@ textarea {
   top: 39px;
   left: 8px;
 }
-*/
+
 #nav-icon {
   width: 60px;
   height: 50px;
@@ -1424,6 +1500,94 @@ textarea {
   left: 8px;
 }
 
+@media all and (max-width: 700px) {
+  .site-header {
+    width: 100%;
+  }
+  .site-header .main-navigation .site-title {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .site-header .main-navigation .menu-burger #nav-icon {
+    right: 0;
+    top: 0.8em;
+  }
+  .site-header .main-navigation .menu-burger #nav-icon span {
+    height: 1px;
+    width: 50%;
+  }
+  .site-header .main-navigation .menu-burger #nav-icon span:nth-child(2) {
+    top: 9px;
+  }
+  .site-header .main-navigation .menu-burger #nav-icon span:nth-child(3) {
+    top: 18px;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .site-logo::before {
+    scale: 0.3;
+    top: -2em;
+    left: -1em;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .site-logo::after {
+    scale: 0.6;
+    right: -1em;
+    top: -1em;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .purple-cat::before {
+    left: -1em;
+    bottom: -4em;
+    scale: 0.6;
+    rotate: 30deg;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .random-flower::after {
+    right: -3.5em;
+    top: 0em;
+    scale: 0.3;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .black-cat::before {
+    left: 2em;
+    bottom: -5em;
+    scale: 0.4;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .black-cat::after {
+    right: 1em;
+    top: 5em;
+    rotate: -15deg;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu .orange-cat::before {
+    left: 0em;
+    top: 10em;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu #small-title {
+    font-size: 14px;
+    top: 25em;
+    text-transform: uppercase;
+    padding-top: 30px;
+  }
+  .site-header .main-navigation .menu-burger .nav-menu #small-title::after {
+    right: -24em;
+    bottom: -25em;
+    scale: 0.5;
+  }
+  .site-header .main-navigation li {
+    position: relative;
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
+  #nav-icon.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
+  }
+  #nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  #nav-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
+  }
+}
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
