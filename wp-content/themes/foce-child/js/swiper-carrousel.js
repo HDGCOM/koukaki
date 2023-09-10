@@ -15,11 +15,11 @@
     },
   });*/
 
-  /*test*/
+ 
   var swiper;
 
   function initSwiper() {
-    if (window.innerWidth < 700) { // Par exemple, vous pouvez ajuster cette valeur en fonction de votre définition de mobile
+    if (window.innerWidth < 700) { 
       swiper = new Swiper(".swiper-container", {
         effect: "coverflow",
         loop: true,
@@ -65,4 +65,4 @@
     initSwiper(); // Initialise le swiper en fonction de la nouvelle largeur d'écran
   });
   
-  /*fin*/
+
