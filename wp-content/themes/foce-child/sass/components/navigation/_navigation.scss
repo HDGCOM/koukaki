@@ -76,7 +76,6 @@
 		position: relative;
 		text-align: end;
 		/*padding: 15px 150px;*/
-
 		.nav-menu{
 			background-color: #fff5e9 ;
 			height: 100vh;
@@ -87,7 +86,6 @@
 			padding-top: 20px;
 			overflow: hidden;
 			animation: fadeInMenu 1000ms ease forwards;
-
 			.site-logo{
 				&::before{
 					content: url(../assets/images/orchid.png);
@@ -105,7 +103,6 @@
 					animation: rotateFlowers 10000ms linear infinite;
 				}
 			}
-
 			.purple-cat{
 				&::before{
 					content: url(../assets/images/purple-cat.png);
@@ -151,7 +148,6 @@
 					animation:floatcat 3000ms ease-in-out infinite alternate 1500ms;
 				}
 			}
-			
 			#small-title{
 				font-size: 14px;
 				top: 7em;
@@ -163,8 +159,6 @@
 					bottom: -33em;
 				}
 			}
-
-			
 		}
 	}
 }
@@ -188,7 +182,6 @@
 	  transform: translateX(20px); 
 	}
   }
-  
    /***Animation flowers***/
    @keyframes rotateFlowers {
 	from {
@@ -198,7 +191,6 @@
 	  transform: rotate(360deg);
 	}
   }
-
   /***Animation Studio title scroll***/
 @keyframes fadeInUpTitle {
 	from {
@@ -233,7 +225,6 @@
 			}
 		}
 	}
-
 }
 
 .comment-navigation,
@@ -257,7 +248,6 @@
 		flex: 1 0 50%;
 	}
 }
-
 /*Icon Menu Berger*/
 #nav-icon span {
   display: block;
@@ -268,9 +258,6 @@
   border-radius: 9px;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
 }
@@ -306,8 +293,6 @@
   top: 39px;
   left: 8px;
 }
-
-
 
 #nav-icon {
 	width: 60px;
@@ -363,7 +348,6 @@
 }
 
 @media all and (max-width: #{$breakpoint__large_phone}) {
-
 	.site-header{
 		width: 100%;
 		.main-navigation{
@@ -386,7 +370,6 @@
 						}
 					}
 				}
-
 				.nav-menu{
 					.site-logo{
 						&::before{
@@ -400,7 +383,6 @@
 							top: -1em;
 						}
 					}
-		
 					.purple-cat{
 						&::before{
 							left: -1em;
@@ -435,7 +417,6 @@
 							top: 10em;
 						}
 					}
-					
 					#small-title{
 						font-size: 14px;
 						top: 25em;
@@ -456,7 +437,6 @@
 			}
 		}
 	} 
-
 	#nav-icon.open {
 		span {
 			&:nth-child(1) {
@@ -475,6 +455,4 @@
 			}
 		}
 	}
-	  
-
 }
