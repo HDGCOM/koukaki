@@ -44,9 +44,7 @@
             });
            
             observer.observe(spanElement);
-        } else {
-            console.error("L'élément '.story h2 span' n'existe pas dans le document.");
-        }
+        } 
     });
 
     //Parallax Logo

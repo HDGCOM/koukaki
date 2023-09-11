@@ -732,10 +732,6 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-html {
-  overflow-x: hidden;
-}
-
 .banner {
   background-image: url("../assets/images/banner.png");
   min-height: 806px;
@@ -1090,6 +1086,9 @@ html {
   }
 }
 @media all and (max-width: 700px) {
+  html {
+    overflow-x: hidden;
+  }
   #studio h2::before {
     content: "";
   }
