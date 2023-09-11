@@ -5,7 +5,6 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-
              <div class="video-background">
                 <video autoplay muted loop>
                     <source src="<?php echo get_template_directory_uri() . '/assets/videos/Studio+Koukaki-vidéo+header+sans+son.mp4'; ?>" type="video/mp4">
@@ -20,7 +19,6 @@ get_header();
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
-            
             <article class="swiper" id="characters">
                 <?php get_template_part('template-parts/carrousel-swiper');?>
             </article>
@@ -50,9 +48,6 @@ get_header();
         <section id="nomination">
             <?php get_template_part('template-parts/nomination-oscars');?>
         </section>
-
-        
-
     </main><!-- #main -->
 
 <?php
