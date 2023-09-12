@@ -770,7 +770,7 @@ textarea {
   animation: fadeInLogo 1000ms ease forwards, floatLogo 3000ms ease-in-out infinite alternate 1000ms;
 }
 
-/***Animation FadeIn sections & Logo***/
+/***Animation FadeIn section banner***/
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -781,6 +781,7 @@ textarea {
     transform: translateY(0);
   }
 }
+/***Animation FadeIn sections & Logo***/
 @keyframes fadeInLogo {
   from {
     opacity: 0;
