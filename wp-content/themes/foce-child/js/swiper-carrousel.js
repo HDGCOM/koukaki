@@ -37,10 +37,8 @@
       });
     }
   }
-  
   // Initialisation du swiper lors du chargement de la page
   initSwiper();
-  
   // Mettre à jour le swiper lors du redimensionnement de la fenêtre
   window.addEventListener("resize", function () {
     swiper.destroy(true, true); // Détruit le swiper actuel

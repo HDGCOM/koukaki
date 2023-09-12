@@ -9,19 +9,17 @@ function theme_enqueue_styles() {
 
 //Navigation.js
 function enqueue_child_theme_scripts() {
-    // Enqueue the child theme script
     wp_enqueue_script( 'child-theme-script', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery' ), '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_scripts' );
-
 
 //Swiper code
 function enqueue_custom_script() {
     // Enregistrement de Swiper depuis le site npm
     wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', array('jquery'), null, true);
 
-    // Enregistrement de votre fichier JavaScript personnalisé
+    // Enregistrement du fichier JavaScript personnalisé
     wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/swiper-carrousel.js', array('swiper'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script');
